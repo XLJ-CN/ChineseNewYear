@@ -29,18 +29,23 @@ namespace lunarYear
                 int span = year - 1984; //假设传入的是1985年
                 int tianganOffset = span % 10;            // 1
                 int dizhiOffset = span % 12;// 1
-                int tianganStart = 0; 
-                int dizhiStart=0;
+                int tianganStart = 0;
+                int dizhiStart = 0;
                 tianganStart += tianganOffset;
                 dizhiStart += dizhiOffset;
-                return tianGan[tianganStart]+ diZhi[dizhiStart];
+                return tianGan[tianganStart] + diZhi[dizhiStart];
                 //return "甲子";
             }
 
         }
 
-        public static string getMonthName(int m) {
-            return month[m-1];
+        public static string getMonthName(int m)
+        {
+            if (m <= 0)
+            {
+                return month[m];
+            }
+            return month[m - 1];
         }
         public static string getDayName(int m)
         {

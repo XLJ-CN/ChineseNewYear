@@ -107,12 +107,21 @@ namespace lunarYear
         {
             ChineseLunisolarCalendar cnsc = new ChineseLunisolarCalendar();
             var now = DateTime.Now;
-            DateTime jrLDate = new DateTime(now.Year, now.Month, now.Day);
+            DateTime jrLDate = new DateTime(now.Year, now.Month, now.Day);//阳历时间
             int year = cnsc.GetYear(jrLDate);
             // 是否有闰月,返回正整数（比如2023年闰2月，返回值为3）
             int flag = cnsc.GetLeapMonth(year);
             //有闰月则实际月份减1
-            int month = flag > 0 ? cnsc.GetMonth(jrLDate) - 1 : cnsc.GetMonth(jrLDate);
+            //TODO 2025年闰6月 不好处理
+            int month = cnsc.GetMonth(jrLDate);
+            if (flag > 0)
+            {
+                if (flag - 1 == month)
+                {
+                    //闰月时间等于当前农历月份
+                    month = cnsc.GetMonth(jrLDate) - 1;
+                }
+            }
             int day = cnsc.GetDayOfMonth(jrLDate);
             //计算下农历纪年法的叫法
             var year_lanar = yearNameHelper.getLunarYearName(year);

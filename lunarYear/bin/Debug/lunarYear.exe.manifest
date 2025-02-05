@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lunarYear.exe" size="12784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lunarYear.exe" size="11776">
       <assemblyIdentity name="lunarYear" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QMpR3xK+jgvxxzlI1nJVo8hZc75k+3tRa7Q/QN07WBU=</dsig:DigestValue>
+        <dsig:DigestValue>/zkeDI/c/3Uv2XPLbbJUh2qifgUvgi+YZaTJiwvOQHo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
